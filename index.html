@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Surya Narayanan K S</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f1c;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a1a2e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#github-link {
+    background-color: #3e3b92;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styles for the Skills section title and subtitle */
+.skills-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills-title h2 {
+    font-size: 52px;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(242, 243, 244);
+}
+
+
+.skills-subtitle {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.skills-subtitle span {
+    font-size: 32px;
+    color: rgb(242, 243, 244);
+}
+
+.skills-line {
+    height: 2px;
+    background-color: #ffffff;
+    margin-left: 10px;
+    width: 100px;
+}
+
+/* Skills Section */
+#skills {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+
+}
+
+/* Container for skill items */
+.skills-grid-container {
+    
+width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 50px;
+    justify-content: center;
+}
+
+/* Each skill container */
+.skill-container {
+    width: 100%;
+    
+max-width: 400px;
+        padding: 10px 36px;
+    background-color: rgba(17, 25, 40, 0.83);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    border-radius: 16px;
+    padding: 18px 36px;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s forwards ease-in-out;
+    animation-delay: calc(0.2s * var(--animation-order));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Animation on hover */
+.skill-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Skill Grid Styles */
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.skill-container h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(177, 178, 179);
+}
+
+.skill-container ul li {
+    background-color: #1a1a2e;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    color: #cfcfcf;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.skill-container ul li img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a2e;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a id="github-link" href="https://github.com/yourusername" target="_blank">Github Profile</a>
+    </header>
+
+    <section id="skills">
+        <div class="skills-title">
+            <h2>Skills</h2>
+            <div class="skills-subtitle">
+<div class="skills-line"></div>
+                <span>Skills Learned</span>
+                <div class="skills-line"></div>
+            </div>
+        </div>
+        <br>
+
+        <div class="skills-grid-container">
+            <div class="skill-container frontend" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+                <h3>Frontend</h3>
+
+                <ul class="skills-grid">
+                    <li><img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React Js"> React Js</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/redux.png" alt="Redux"> Redux</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/angularjs.png" alt="Angular Js"> Angular Js</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5"> HTML5</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"> JavaScript</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3"> CSS3</li>
+                                        <li><img src="https://img.icons8.com/fluency/48/000000/next.png" alt="Next Js"> Next Js</li>
+                                    </ul>
+            </div>
+
+            <div class="skill-container backend" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+                <h3>Backend</h3>
+                <ul class="skills-grid">
+                    <li><img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js"> Node.js</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/express.png" alt="Express.js"> Express.js</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python"> Python</li>
+                    <li><img src="https://img.icons8.com/ios-filled/50/000000/mysql-logo.png" alt="MySQL"> MySQL</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/django.png" alt="Django"> Django</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask"> Flask</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/postgreesql.png" alt="PostgreSQL"> PostgreSQL</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB"> MongoDB</li>
+                                    </ul>
+            </div>
+
+            <div class="skill-container devops" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+                <h3>DevOps</h3>
+                <ul class="skills-grid">
+                    <li><img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="AWS"> AWS</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker"> Docker</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/jenkins.png" alt="Jenkins"> Jenkins</li>
+               
+                                        <li><img src="https://img.icons8.com/color/48/000000/linux.png" alt="Linux"> Linux</li>
+                </ul>
+            </div>
+
+            <div class="skill-container ml-ai" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+                <h3>ML/AI</h3>
+                <ul class="skills-grid">
+                    <li><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python"> Python</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="Tensorflow"> Tensorflow</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/keras.png" alt="Keras"> Keras</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/scikit-learn.png" alt="Scikit-learn"> Scikit-learn</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/pytorch.png" alt="PyTorch"> PyTorch</li>
+                    <li><img src="https://img.icons8.com/color/48/000000/opencv.png" alt="OpenCV"> OpenCV</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Surya Narayanan K S</p>
+    </footer>
+</body>
+
+</html>
